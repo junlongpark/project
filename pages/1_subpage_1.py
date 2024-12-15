@@ -3,7 +3,7 @@ import geopandas as gpd
 import plotly.express as px
 import altair as alt
 import pandas as pd
-df_S=pd.read_csv('C:/Users/junlo/Desktop/데이터시각/melted_data_cp949_cleaned.csv', encoding='euc-kr')
+df_S=pd.read_csv('pages/melted_data_cp949_cleaned.csv', encoding='euc-kr')
 
 with st.sidebar:
     st.title('연도별 Scatter plot, Tree map')
@@ -15,10 +15,6 @@ with st.sidebar:
 
     df_selected_year = df_S.query('Year == @selected_year') # 선택한 연도와 카테고리에 해당하는 데이터만 가져오기
     df_selected_year_sorted = df_selected_year.sort_values(by="Count", ascending=False) # 선택한 연도와 카테고리에 해당하는 데이터를 인구수를 기준으로 내림차순 정렬
-
-# geopandas 라이브러리 불러오기
-# geopandas의 read_file 함수로 데이터 불러오기
-gdf_seoul_gu = gpd.read_file('C:/Users/junlo/Desktop/데이터시각/korea_map.json')
 
 tab_1, tab_2, tab_3= st.tabs(['Scatter chart', 'Tree map','Pie Chart']) 
 with tab_1:
