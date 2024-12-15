@@ -3,7 +3,7 @@ import geopandas as gpd
 import plotly.express as px
 import altair as alt
 import pandas as pd
-df_S=pd.read_csv('pages/melted_data_cp949_cleaned.csv', encoding='euc-kr')
+df_S=pd.read_csv('melted_data_cp949_cleaned.csv', encoding='euc-kr')
 
 with st.sidebar:
     st.title('연도별 Scatter plot, Tree map')
