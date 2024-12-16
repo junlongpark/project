@@ -16,7 +16,7 @@ alt.themes.enable("dark")
 df_S=pd.read_csv('melted_data_cp949_cleaned.csv', encoding='euc-kr')
 
 with st.sidebar:
-    st.title('🏂 대한민국 인구 대시보드')
+    st.title('지역별 공급업체수')
     
     year_list = list(df_S.Year.unique())[::-1]  # 연도 리스트를 내림차순으로 정렬
     category_list = list(df_S.Category.unique())  # 카테고리 리스트
